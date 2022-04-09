@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: black;
+    color: white;
+}
+.task
+{
+    position: relative;
+    top: 80px;
+    left: 180px;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+.lists
+{
+    font-size: 45px;
+    font-weight: normal;
+    font-family: 'Raleway';
+}
+#add-list
+{
+    z-index: 1;
+    position: relative;
+    left: 80%;
+    cursor: pointer;
+}
+.add-listlabel
+{
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Raleway';
+    position: relative;
+    top: 35px;
+    left: 1020px;
+}   
+#addinglistsection
+{
+    display: none;
+    position: fixed;
+    padding: 20% 0 20% 35%;
+    top: -10%;
+    z-index: 1;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 60vw;
+    height: 30vh;
+}
+#addinglistcard
+{
+    border-radius: 7px;
+    width: 30vw;
+    height: 160px;
+    padding: 30px 0 0 0px;
+    text-align: center;
+    color: black;
+    background-color: whitesmoke;
+    animation: modalPop 0.2s ease-in 0s 1;
+}
+.content
+{
+    color: red;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+.addpopupbutton, .closepopupbutton
+{
+    color: white;
+    background-color: red;
+    border-radius: 15px;
+    border: red;
+    font-size: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    position: relative;
+    top: 20px;
+}
+button{
+    border: none;
+}
+.closepopupbutton{
+    margin-left: 10%;
+}
+/* .content{
+    margin-top: 3%;
+} */
+.inputboxcontent
+{
+    width: 220px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+#outer_container
+{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 50px;
+    width: 90%;
+}
+.card
+{
+    list-style-type: style;
+    display: none;
+    position: relative;
+    min-height: 300px;
+    min-width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10% 0 0 10%;
+    padding: 10px 0 0 0;
+    background-color: whitesmoke;
+    font-family: 'Railway';
+    animation: cardAnimate 0.2s ease-in 0s 1;
+}
+.card-head
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 28px;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+}
+.list-element
+{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.buttons-in-card
+{
+    display: flex;
+    font-size: 30px;
+}
+.delete-button-in-card
+{
+    position: absolute;
+    right: 50px;
+    bottom: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #393E46;
+    background-color: whitesmoke;
+}
+.add-button-in-card
+{
+    position: absolute;
+    bottom: 10px;
+    font-size: 25px;
+    margin-left: 15%;
+    right: 10px;
+    cursor: pointer;
+    color:#393E46;
+    background-color: whitesmoke;
+}
+.innerlist-button
+{
+    cursor: pointer;
+}
+#addingitemsection
+{
+    display: none;
+    position: fixed;
+    padding: 20% 0 20% 35%;
+    top: -10%;
+    z-index: 1;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 60vw;
+    height: 30vh;
+}
+#addingitempoints
+{
+    border-radius: 7px;
+    width: 30vw;
+    height: 30vh;
+    padding: 10px 0 0 0px;
+    text-align: center;
+    color: black;
+    background-color: #fff;
+    animation: upPop 0.2s ease-in 0s 1;
+}
+.this-list-element
+{
+    font-size: 20px;
+    font-weight: 700;
+    color: #393E46;
+    animation: cardTextAnimate 0.2s ease-in 0s 1;
+}
+#check-done
+{
+    color: black;
+    background-color: grey;
+    display: none;
+}
+.mark-as-done-class{
+    background-color: #0169f0;
+    color: whitesmoke;
+    font-size: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0px 10px 10px 10px;
+}
+#back_button
+{
+    font-size: 30px;
+    position: relative;
+    top: 15px;
+    left: 300px;
+    width: 150px;
+    display: none;
+} 
+#dynamic-card
+{
+    justify-content: center;
+    font-size: 45px;
+    font-weight: 800;
+    color: whitesmoke;
+    display: none;
+    font-family: 'Raleway';
+    position: absolute;
+    top: 80px;
+    left: 620px;
+}
+#empty-list{
+    position: relative;
+    top: 13vh;
+    margin-left: 13.5vw;
+    color: white;
+    font-size: 27px;
+    font-weight: 400;
+    font-family: 'Raleway';
+}
+
+@keyframes upPop {
+    0% { transform: scale(0); };
+    50% { transform: scale(0.5); };
+    100% { transform: scale(1); };
+}
+
+@keyframes cardAnimate {
+    0% { transform: scaleX(0); };
+    100% { transform: scaleX(1); };
+}
+
+@keyframes cardTextAnimate {
+    0% { transform: scaleY(0); };
+    100% { transform: scaleY(1); };
+}
